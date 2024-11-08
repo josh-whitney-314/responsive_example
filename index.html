@@ -13,11 +13,10 @@ or leaving my code on a public web site constitutes cheating.
 I acknowledge that  If I am found in violation of this policy this may result
 in a zero grade, a permanent record on file and possibly immediate failure of the class.
  
-Reflection (1-2 paragraphs):  This was honestly an incredibly frustrating project to work on. While we've learned grids, flexboxes,
-and other basic JS in class, many of the requirements had not yet been taught sufficiently. I was able to eventually find tutorials for media queries,
-asides, linking scripts, and integrating Javascript into the website (and learning the JS that the website needed, which was wholly unfamiliar to 
-what we covered in class save for functions), etc., but it led to many long, tedious hours that, looking ahead in the course curriculum, I wonder if
-were strictly necessary.
+Reflection (1-2 paragraphs):  Making the changes was interesting. Finding tutorials on setting up multiple themes
+and toggling between them has led me to believe that there are more effective and efficient ways of doing this than using
+two style sheets and editting the DOM. Regardless, it works, and works about as well as it probably will
+given the minimality of the site.
  
 -->
 
@@ -25,7 +24,7 @@ were strictly necessary.
 
 <head>
     <!--Header-->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link id="sheet" rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/main.js"></script>
 </head>
 
@@ -36,14 +35,13 @@ were strictly necessary.
 </header>
 
 <aside> <!--menu-->
-<nav id="navbar" class="sidenav">
-        <ul>
-            <li><button class="homeBtn" onclick="home()">Home</button></li>
-            <li><button class="btn" onclick="page1()">Mutualism</button></li>
-            <li><button class="btn" onclick="page2()">Pitcher Plant</button></li>
-            <li><button class="btn" onclick="page3()">Advantages</button></li>
-        </ul>
-</nav>
+    <ul>
+        <li><button class="homeBtn" onclick="home()">Home</button></li>
+        <li><button class="btn" onclick="page1()">Mutualism</button></li>
+        <li><button class="btn" onclick="page2()">Pitcher Plant</button></li>
+        <li><button class="btn" onclick="page3()">Advantages</button></li>
+        <li><button class="themeBtn" onclick="toggleTheme()">Toggle Night Mode</button></li>
+    </ul>
 </aside>
 
 <section class="main">
